@@ -12,6 +12,7 @@ int main()
    for (int i = 1; i <= 20; ++i) {
       v.push_back(i);
    }
+   
    // Count the number of even numbers in the vector by
    // using the for_each function and a lambda.
    int evenCount = 0;
@@ -30,4 +31,21 @@ int main()
    // Print the count of even numbers to the console.
    cout << "There are " << evenCount
         << " even numbers in the vector." << endl;
+   int factor = 5;
+   vector<int>::iterator ptr; 
+   int Count = 0;
+   int i = 0;
+    for_each(v.begin(), v.end(), [&Count] (int n) 
+   {
+      cout << n;
+      //cout << v[i++];
+      if (n % 2 == 0) {
+         cout << " is even " << endl;
+         ++Count;
+      } else {
+         cout << " is odd " << endl;
+      }
+   }
+   );
+   
 }
