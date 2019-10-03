@@ -49,3 +49,6 @@ int main()
    );
    
 }
+
+auto upperBound = 42;
+//[upperBound](int value) { return 0 < value && value < upperBound; }
